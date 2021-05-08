@@ -1,0 +1,2 @@
+CREATE TABLE HoldBalance(
+ID BIGINT PRIMARY KEY, AccountNo BIGINT, HoldBalance VARCHAR(20));

@@ -1,0 +1,2 @@
+CREATE TABLE Account(ID BIGINT PRIMARY KEY, Name VARCHAR(20), AccountNo BIGINT, 
+OriginalBalance VARCHAR(20));
