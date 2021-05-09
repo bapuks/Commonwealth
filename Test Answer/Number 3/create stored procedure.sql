@@ -1,9 +1,8 @@
-
-
 CREATE PROCEDURE [dbo].[migrateToMasterAccount]
 AS
   BEGIN
        SET NOCOUNT ON;
+       INSERT INTO MasterAccount
        SELECT A.ID, A.Name, A.AccountNo,  
 	   REPLACE(CONVERT(VARCHAR,CONVERT(MONEY,((CONVERT(BIGINT, (SELECT REPLACE
 		(CONVERT(MONEY,CONVERT(VARCHAR,A.OriginalBalance),1), '.00','')) ))	
@@ -19,3 +18,4 @@ END;
      
      
      
+--select * from masteraccount;
